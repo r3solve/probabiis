@@ -1,0 +1,238 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/research", label: "Research" },
+    { href: "/people", label: "People" },
+    { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
+];
+---
+
+<nav class="navbar" id="navbar">
+    <div class="nav-inner container">
+        <a href="/" class="nav-logo">
+            <span class="logo-icon">◬</span>
+            <span class="logo-text">Probabilis</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+            {
+                navLinks.map((link) => (
+                    <li>
+                        <a
+                            href={link.href}
+                            class:list={[
+                                "nav-link",
+                                { active: currentPath === link.href },
+                            ]}
+                        >
+                            {link.label}
+                        </a>
+                    </li>
+                ))
+            }
+        </ul>
+
+        <button
+            class="nav-toggle"
+            id="nav-toggle"
+            aria-label="Toggle navigation"
+        >
+            <span class="hamburger"></span>
+        </button>
+    </div>
+</nav>
+
+<style>
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        height: var(--nav-height);
+        background: rgba(10, 14, 26, 0.8);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--color-border);
+        transition: all var(--transition-base);
+    }
+
+    .navbar.scrolled {
+        background: rgba(10, 14, 26, 0.95);
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        text-decoration: none;
+        color: var(--color-text-primary);
+        font-weight: 700;
+        font-size: var(--text-xl);
+    }
+
+    .logo-icon {
+        font-size: var(--text-2xl);
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .logo-text {
+        letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: var(--space-xs);
+    }
+
+    .nav-link {
+        display: block;
+        padding: var(--space-sm) var(--space-md);
+        color: var(--color-text-secondary);
+        font-size: var(--text-sm);
+        font-weight: 500;
+        text-decoration: none;
+        border-radius: var(--radius-md);
+        transition: all var(--transition-fast);
+        position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: var(--color-text-primary);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 16px;
+        height: 2px;
+        background: var(--gradient-hero);
+        border-radius: var(--radius-full);
+    }
+
+    .nav-toggle {
+        display: none;
+        background: none;
+        border: none;
+        padding: var(--space-sm);
+        cursor: pointer;
+    }
+
+    .hamburger {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: var(--color-text-primary);
+        border-radius: 1px;
+        position: relative;
+        transition: all var(--transition-fast);
+    }
+
+    .hamburger::before,
+    .hamburger::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background: var(--color-text-primary);
+        border-radius: 1px;
+        transition: all var(--transition-fast);
+    }
+
+    .hamburger::before {
+        top: -6px;
+    }
+    .hamburger::after {
+        top: 6px;
+    }
+
+    .nav-toggle.open .hamburger {
+        background: transparent;
+    }
+    .nav-toggle.open .hamburger::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+    .nav-toggle.open .hamburger::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    @media (max-width: 768px) {
+        .nav-toggle {
+            display: block;
+        }
+
+        .nav-links {
+            position: fixed;
+            top: var(--nav-height);
+            left: 0;
+            right: 0;
+            bottom: 0;
+            flex-direction: column;
+            background: rgba(10, 14, 26, 0.98);
+            backdrop-filter: blur(24px);
+            padding: var(--space-2xl);
+            gap: var(--space-sm);
+            transform: translateX(100%);
+            transition: transform var(--transition-base);
+        }
+
+        .nav-links.open {
+            transform: translateX(0);
+        }
+
+        .nav-link {
+            font-size: var(--text-lg);
+            padding: var(--space-md) var(--space-lg);
+        }
+    }
+</style>
+
+<script>
+    const toggle = document.getElementById("nav-toggle");
+    const links = document.getElementById("nav-links");
+    const navbar = document.getElementById("navbar");
+
+    toggle?.addEventListener("click", () => {
+        toggle.classList.toggle("open");
+        links?.classList.toggle("open");
+    });
+
+    // Close mobile menu on link click
+    links?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            toggle?.classList.remove("open");
+            links?.classList.remove("open");
+        });
+    });
+
+    // Scroll effect
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) {
+            navbar?.classList.add("scrolled");
+        } else {
+            navbar?.classList.remove("scrolled");
+        }
+    });
+</script>

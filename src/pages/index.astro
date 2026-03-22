@@ -1,17 +1,790 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Probabilis — Testing the Limits of Machine Intelligence">
+	<!-- HERO -->
+	<section class="hero">
+		<div class="hero-bg-orbs">
+			<div class="orb orb-1"></div>
+			<div class="orb orb-2"></div>
+			<div class="orb orb-3"></div>
+		</div>
+		<div class="container hero-container">
+			<div class="hero-content">
+				<span class="section-label animate-fade-in-up"
+					>Research Lab · Accra, Ghana</span
+				>
+				<h1 class="hero-title animate-fade-in-up delay-1">
+					<span class="gradient-text">Probabilis</span>
+				</h1>
+				<p class="hero-tagline animate-fade-in-up delay-2">
+					Testing the Limits of Machine Intelligence
+				</p>
+				<div class="hero-actions animate-fade-in-up delay-3">
+					<a href="/research" class="btn-primary">Our Research →</a>
+					<a href="/contact" class="btn-outline">Get In Touch</a>
+				</div>
+			</div>
+			<div class="hero-visual animate-fade-in delay-4">
+				<div class="hero-glyph">
+					<svg
+						viewBox="0 0 200 200"
+						xmlns="http://www.w3.org/2000/svg"
+						class="hero-svg"
+					>
+						<defs>
+							<linearGradient
+								id="grad1"
+								x1="0%"
+								y1="0%"
+								x2="100%"
+								y2="100%"
+							>
+								<stop
+									offset="0%"
+									style="stop-color:#38bdf8;stop-opacity:0.6"
+								></stop>
+								<stop
+									offset="50%"
+									style="stop-color:#818cf8;stop-opacity:0.4"
+								></stop>
+								<stop
+									offset="100%"
+									style="stop-color:#c084fc;stop-opacity:0.6"
+								></stop>
+							</linearGradient>
+						</defs>
+						<circle
+							cx="100"
+							cy="100"
+							r="80"
+							fill="none"
+							stroke="url(#grad1)"
+							stroke-width="0.5"
+							opacity="0.6"></circle>
+						<circle
+							cx="100"
+							cy="100"
+							r="60"
+							fill="none"
+							stroke="url(#grad1)"
+							stroke-width="0.5"
+							opacity="0.4"></circle>
+						<circle
+							cx="100"
+							cy="100"
+							r="40"
+							fill="none"
+							stroke="url(#grad1)"
+							stroke-width="0.5"
+							opacity="0.3"></circle>
+						<polygon
+							points="100,30 160,130 40,130"
+							fill="none"
+							stroke="url(#grad1)"
+							stroke-width="0.8"
+							opacity="0.7"></polygon>
+						<polygon
+							points="100,170 40,70 160,70"
+							fill="none"
+							stroke="url(#grad1)"
+							stroke-width="0.8"
+							opacity="0.5"></polygon>
+						<circle
+							cx="100"
+							cy="100"
+							r="4"
+							fill="#38bdf8"
+							opacity="0.8"></circle>
+						<circle
+							cx="100"
+							cy="30"
+							r="2.5"
+							fill="#818cf8"
+							opacity="0.6"></circle>
+						<circle
+							cx="160"
+							cy="130"
+							r="2.5"
+							fill="#c084fc"
+							opacity="0.6"></circle>
+						<circle
+							cx="40"
+							cy="130"
+							r="2.5"
+							fill="#38bdf8"
+							opacity="0.6"></circle>
+					</svg>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- OPENING NARRATIVE -->
+	<section class="section narrative">
+		<div class="container">
+			<div class="narrative-grid">
+				<div class="narrative-label">
+					<span class="section-label">The Landscape</span>
+				</div>
+				<div class="narrative-text">
+					<p class="narrative-paragraph">
+						In recent years, large language models (LLMs) have moved
+						from experimental systems to widely deployed
+						infrastructure. Models such as GPT-4 demonstrate
+						capabilities in reasoning, coding, and communication
+						that were once considered out of reach.
+					</p>
+					<p class="narrative-paragraph">
+						As these systems scale, they are increasingly positioned
+						as candidates for general-purpose intelligence—raising
+						both excitement and concern about their long-term
+						implications.
+					</p>
+					<p class="narrative-paragraph">
+						But most evaluations happen in controlled,
+						Western-centric contexts. We believe real understanding
+						requires testing these systems against <strong
+							>locally-scoped, verifiable problems</strong
+						>—the kind you encounter on the streets of Accra, in
+						Ghanaian classrooms, and across West African markets.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- THE QUESTION -->
+	<section class="section question-section">
+		<div class="container">
+			<span class="section-label">The Question</span>
+			<p class="question-intro">
+				Despite their success, a fundamental question remains
+				unresolved:
+			</p>
+			<blockquote class="big-question">
+				<p>
+					Are large language models sufficient for general
+					intelligence?
+				</p>
+			</blockquote>
+			<p class="question-divider-text">
+				This question has divided the research community.
+			</p>
+
+			<div class="quotes-grid">
+				<div class="quote-card glass-card">
+					<div class="quote-icon">⚠</div>
+					<blockquote class="quote-text">
+						"Current AI systems… do not understand the physical
+						world, they lack persistent memory, reasoning, and
+						planning."
+					</blockquote>
+					<cite class="quote-attribution">— Yann LeCun</cite>
+				</div>
+				<div class="quote-card glass-card">
+					<div class="quote-icon">⚡</div>
+					<blockquote class="quote-text">
+						"We are now confident we know how to build AGI."
+					</blockquote>
+					<cite class="quote-attribution">— Sam Altman</cite>
+				</div>
+			</div>
+
+			<p class="question-closing">
+				These perspectives reflect a deeper uncertainty about the nature
+				of intelligence itself.
+			</p>
+		</div>
+	</section>
+
+	<!-- OUR APPROACH -->
+	<section class="section approach-section">
+		<div class="container">
+			<span class="section-label">Our Approach</span>
+			<h2 class="section-title">Models as Hypotheses</h2>
+			<p class="section-subtitle approach-desc">
+				At Probabilis, we treat large language models not as
+				solutions—but as hypotheses. We apply them to locally-scoped
+				Ghanaian problems—domains where outcomes are verifiable and
+				context is clearly understood—to test whether they can
+				generalize to:
+			</p>
+
+			<div class="capabilities-grid">
+				<div class="capability-card glass-card">
+					<div class="capability-icon">🚦</div>
+					<h3>Urban Traffic & Infrastructure</h3>
+					<p>
+						Can LLMs reason about Accra's traffic patterns,
+						intersection management, and real-time transit
+						decisions?
+					</p>
+				</div>
+				<div class="capability-card glass-card">
+					<div class="capability-icon">🌾</div>
+					<h3>Agriculture & Supply Chains</h3>
+					<p>
+						Testing crop planning, market pricing, and logistics
+						across Ghanaian farming communities.
+					</p>
+				</div>
+				<div class="capability-card glass-card">
+					<div class="capability-icon">🏥</div>
+					<h3>Healthcare & Diagnostics</h3>
+					<p>
+						Evaluating diagnostic reasoning in local clinical
+						contexts—malaria triage, maternal care, rural health.
+					</p>
+				</div>
+				<div class="capability-card glass-card">
+					<div class="capability-icon">🗣️</div>
+					<h3>Local Language & Culture</h3>
+					<p>
+						Probing understanding of Twi, Ga, Ewe, and culturally
+						embedded reasoning beyond English-centric benchmarks.
+					</p>
+				</div>
+			</div>
+
+			<p class="approach-footnote">
+				Rather than relying on global benchmarks, we design
+				locally-grounded experiments where outcomes are observable and
+				verifiable.
+			</p>
+		</div>
+	</section>
+
+	<!-- WHAT WE DO -->
+	<section class="section whatwedo-section">
+		<div class="container">
+			<div class="whatwedo-grid">
+				<div class="whatwedo-left">
+					<span class="section-label">What We Do</span>
+					<h2 class="section-title">Research Agenda</h2>
+				</div>
+				<div class="whatwedo-right">
+					<ul class="activity-list">
+						<li class="activity-item glass-card">
+							<span class="activity-marker"></span>
+							<span
+								>Cross-domain evaluation of LLMs on Ghanaian
+								datasets</span
+							>
+						</li>
+						<li class="activity-item glass-card">
+							<span class="activity-marker"></span>
+							<span
+								>Simulation-based experiments in local systems
+								(traffic, agriculture, health)</span
+							>
+						</li>
+						<li class="activity-item glass-card">
+							<span class="activity-marker"></span>
+							<span
+								>Failure mode analysis in locally verifiable
+								environments</span
+							>
+						</li>
+						<li class="activity-item glass-card">
+							<span class="activity-marker"></span>
+							<span
+								>Exploration of alternative architectures (e.g.,
+								world models, hybrid systems)</span
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- WHY IT MATTERS -->
+	<section class="section matters-section">
+		<div class="container">
+			<span class="section-label">Why It Matters</span>
+			<div class="matters-statements">
+				<div class="matter-item">
+					<span class="matter-condition">If LLMs are sufficient</span>
+					<p class="matter-consequence">
+						for general intelligence, their continued development
+						will define the future of technology and society.
+					</p>
+				</div>
+				<div class="matter-divider"></div>
+				<div class="matter-item">
+					<span class="matter-condition">If they are not</span>
+					<p class="matter-consequence">
+						then identifying their limits becomes a prerequisite for
+						progress.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- CLOSING -->
+	<section class="section closing-section">
+		<div class="container">
+			<div class="closing-content">
+				<p class="closing-line">We are not building intelligence.</p>
+				<p class="closing-line closing-emphasis gradient-text">
+					We are measuring it.
+				</p>
+				<div class="closing-actions">
+					<a href="/research" class="btn-primary"
+						>Explore Our Research →</a
+					>
+				</div>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
+
+<style>
+	/* --- HERO --- */
+	.hero {
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		padding-top: var(--nav-height);
+	}
+
+	.hero-bg-orbs {
+		position: absolute;
+		inset: 0;
+		pointer-events: none;
+		overflow: hidden;
+	}
+
+	.orb {
+		position: absolute;
+		border-radius: 50%;
+		filter: blur(80px);
+		opacity: 0.3;
+	}
+
+	.orb-1 {
+		width: 500px;
+		height: 500px;
+		background: rgba(56, 189, 248, 0.15);
+		top: -100px;
+		right: -100px;
+		animation: float 8s ease-in-out infinite;
+	}
+
+	.orb-2 {
+		width: 400px;
+		height: 400px;
+		background: rgba(129, 140, 248, 0.12);
+		bottom: -50px;
+		left: -100px;
+		animation: float 10s ease-in-out infinite reverse;
+	}
+
+	.orb-3 {
+		width: 300px;
+		height: 300px;
+		background: rgba(192, 132, 252, 0.1);
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		animation: float 12s ease-in-out infinite;
+	}
+
+	.hero-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		gap: var(--space-3xl);
+		position: relative;
+		z-index: 1;
+	}
+
+	.hero-title {
+		font-size: var(--text-7xl);
+		font-weight: 900;
+		letter-spacing: -0.03em;
+		margin-bottom: var(--space-md);
+	}
+
+	.hero-tagline {
+		font-size: var(--text-xl);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-2xl);
+		max-width: 480px;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: var(--space-md);
+		flex-wrap: wrap;
+	}
+
+	.hero-visual {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.hero-glyph {
+		width: 320px;
+		height: 320px;
+		animation: float 6s ease-in-out infinite;
+	}
+
+	.hero-svg {
+		width: 100%;
+		height: 100%;
+		filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.15));
+	}
+
+	@media (max-width: 768px) {
+		.hero-container {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+
+		.hero-title {
+			font-size: var(--text-5xl);
+		}
+
+		.hero-tagline {
+			margin-inline: auto;
+		}
+
+		.hero-actions {
+			justify-content: center;
+		}
+
+		.hero-visual {
+			order: -1;
+		}
+
+		.hero-glyph {
+			width: 200px;
+			height: 200px;
+		}
+	}
+
+	/* --- NARRATIVE --- */
+	.narrative-grid {
+		display: grid;
+		grid-template-columns: 200px 1fr;
+		gap: var(--space-3xl);
+		max-width: 900px;
+	}
+
+	.narrative-paragraph {
+		font-size: var(--text-lg);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-lg);
+		line-height: 1.8;
+	}
+
+	.narrative-paragraph:last-child {
+		margin-bottom: 0;
+	}
+
+	@media (max-width: 768px) {
+		.narrative-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-lg);
+		}
+	}
+
+	/* --- QUESTION --- */
+	.question-section {
+		text-align: center;
+	}
+
+	.question-intro {
+		font-size: var(--text-lg);
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-2xl);
+	}
+
+	.big-question {
+		max-width: 700px;
+		margin-inline: auto;
+		margin-bottom: var(--space-2xl);
+		padding: var(--space-2xl);
+		border-left: none;
+		position: relative;
+	}
+
+	.big-question p {
+		font-size: var(--text-3xl);
+		font-weight: 700;
+		background: var(--gradient-hero);
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		line-height: 1.3;
+	}
+
+	.question-divider-text {
+		color: var(--color-text-muted);
+		font-size: var(--text-sm);
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: var(--space-3xl);
+	}
+
+	.quotes-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: var(--space-xl);
+		max-width: 900px;
+		margin-inline: auto;
+		margin-bottom: var(--space-3xl);
+		text-align: left;
+	}
+
+	.quote-card {
+		padding: var(--space-xl);
+	}
+
+	.quote-icon {
+		font-size: var(--text-2xl);
+		margin-bottom: var(--space-md);
+	}
+
+	.quote-text {
+		font-size: var(--text-base);
+		color: var(--color-text-secondary);
+		font-style: italic;
+		line-height: 1.7;
+		margin-bottom: var(--space-md);
+		border: none;
+		padding: 0;
+	}
+
+	.quote-attribution {
+		font-size: var(--text-sm);
+		color: var(--color-accent);
+		font-style: normal;
+		font-weight: 600;
+	}
+
+	.question-closing {
+		font-size: var(--text-base);
+		color: var(--color-text-muted);
+		font-style: italic;
+	}
+
+	@media (max-width: 768px) {
+		.quotes-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.big-question p {
+			font-size: var(--text-2xl);
+		}
+	}
+
+	/* --- APPROACH --- */
+	.approach-desc {
+		margin-bottom: var(--space-3xl);
+	}
+
+	.capabilities-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: var(--space-lg);
+		margin-bottom: var(--space-2xl);
+	}
+
+	.capability-card {
+		padding: var(--space-xl);
+		text-align: center;
+	}
+
+	.capability-icon {
+		font-size: var(--text-3xl);
+		margin-bottom: var(--space-md);
+		display: block;
+	}
+
+	.capability-card h3 {
+		font-size: var(--text-base);
+		font-weight: 600;
+		margin-bottom: var(--space-sm);
+	}
+
+	.capability-card p {
+		font-size: var(--text-sm);
+		color: var(--color-text-muted);
+		line-height: 1.6;
+	}
+
+	.approach-footnote {
+		font-size: var(--text-sm);
+		color: var(--color-text-muted);
+		text-align: center;
+		font-style: italic;
+	}
+
+	@media (max-width: 768px) {
+		.capabilities-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.capabilities-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	/* --- WHAT WE DO --- */
+	.whatwedo-grid {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: var(--space-3xl);
+		align-items: start;
+	}
+
+	.activity-list {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-md);
+	}
+
+	.activity-item {
+		display: flex;
+		align-items: center;
+		gap: var(--space-md);
+		padding: var(--space-lg) var(--space-xl);
+		font-size: var(--text-base);
+		color: var(--color-text-secondary);
+	}
+
+	.activity-marker {
+		width: 8px;
+		height: 8px;
+		min-width: 8px;
+		border-radius: 50%;
+		background: var(--gradient-hero);
+	}
+
+	@media (max-width: 768px) {
+		.whatwedo-grid {
+			grid-template-columns: 1fr;
+			gap: var(--space-xl);
+		}
+	}
+
+	/* --- WHY IT MATTERS --- */
+	.matters-section {
+		text-align: center;
+	}
+
+	.matters-statements {
+		max-width: 700px;
+		margin-inline: auto;
+		margin-top: var(--space-3xl);
+	}
+
+	.matter-item {
+		padding: var(--space-xl) 0;
+	}
+
+	.matter-condition {
+		display: block;
+		font-size: var(--text-2xl);
+		font-weight: 700;
+		color: var(--color-accent);
+		margin-bottom: var(--space-sm);
+	}
+
+	.matter-consequence {
+		font-size: var(--text-lg);
+		color: var(--color-text-secondary);
+		line-height: 1.7;
+	}
+
+	.matter-divider {
+		width: 60px;
+		height: 1px;
+		background: var(--color-border);
+		margin: var(--space-sm) auto;
+	}
+
+	/* --- CLOSING --- */
+	.closing-section {
+		padding-block: var(--space-5xl);
+		text-align: center;
+	}
+
+	.closing-content {
+		max-width: 700px;
+		margin-inline: auto;
+	}
+
+	.closing-line {
+		font-size: var(--text-3xl);
+		font-weight: 300;
+		color: var(--color-text-secondary);
+		margin-bottom: var(--space-sm);
+	}
+
+	.closing-emphasis {
+		font-size: var(--text-5xl);
+		font-weight: 800;
+	}
+
+	.closing-actions {
+		margin-top: var(--space-3xl);
+	}
+
+	@media (max-width: 768px) {
+		.closing-line {
+			font-size: var(--text-2xl);
+		}
+
+		.closing-emphasis {
+			font-size: var(--text-3xl);
+		}
+	}
+</style>
+
+<script>
+	// Intersection Observer for scroll animations
+	const observerOptions = {
+		threshold: 0.1,
+		rootMargin: "0px 0px -50px 0px",
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("in-view");
+				observer.unobserve(entry.target);
+			}
+		});
+	}, observerOptions);
+
+	document.querySelectorAll(".section").forEach((section) => {
+		section.style.opacity = "0";
+		section.style.transform = "translateY(24px)";
+		section.style.transition =
+			"opacity 0.7s ease-out, transform 0.7s ease-out";
+		observer.observe(section);
+	});
+
+	document.addEventListener("DOMContentLoaded", () => {
+		document
+			.querySelectorAll(".in-view, .section.in-view")
+			.forEach((el) => {});
+	});
+
+	// Add in-view styles
+	const style = document.createElement("style");
+	style.textContent = `.section.in-view { opacity: 1 !important; transform: translateY(0) !important; }`;
+	document.head.appendChild(style);
+</script>

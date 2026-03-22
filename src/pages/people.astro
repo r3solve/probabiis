@@ -1,0 +1,249 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const team = [
+  {
+    name: "Fredrick Andoh",
+    role: "CEO & Applied Research Scientist",
+    bio: "Leading Probabilis with a focus on applied AI research grounded in locally verifiable Ghanaian problems—from traffic simulation to agricultural planning.",
+    initials: "FA",
+    color: "#38bdf8",
+  },
+  {
+    name: "Abdul Haque Yahaya Yelpeoa",
+    role: "Research Scientist",
+    bio: "Focused on LLM evaluation and simulation-based experiments in Ghanaian contexts, including urban traffic systems and healthcare diagnostics.",
+    initials: "AY",
+    color: "#818cf8",
+  },
+  {
+    name: "Divine Elikhem",
+    role: "Research Scientist",
+    bio: "Working on cross-domain evaluation of transformer models and local language processing, with a focus on Twi and Ga NLP applications.",
+    initials: "DE",
+    color: "#34d399",
+  },
+  {
+    name: "Prof. Frimpong Twum",
+    role: "Advisor & Research Consultant",
+    bio: "Providing strategic research direction and academic guidance. Extensive experience in computer science research and AI applications in the Ghanaian academic landscape.",
+    initials: "FT",
+    color: "#c084fc",
+  },
+];
+---
+
+<BaseLayout
+  title="People — Probabilis"
+  description="Meet the team behind Probabilis."
+>
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-label">People</span>
+      <h1 class="page-title">Our Team</h1>
+      <p class="page-subtitle">
+        A focused team based in Ghana, working at the intersection of AI
+        evaluation, simulation, and locally grounded research.
+      </p>
+    </div>
+  </section>
+
+  <!-- TEAM GRID -->
+  <section class="section">
+    <div class="container">
+      <div class="team-grid">
+        {
+          team.map((member) => (
+            <article class="team-card glass-card">
+              <div
+                class="team-avatar"
+                style={`--avatar-color: ${member.color}`}
+              >
+                <span class="avatar-initials">{member.initials}</span>
+              </div>
+              <h3 class="team-name">{member.name}</h3>
+              <p class="team-role">{member.role}</p>
+              <p class="team-bio">{member.bio}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN US -->
+  <section class="section join-section">
+    <div class="container">
+      <div class="join-content">
+        <span class="section-label">Careers</span>
+        <h2 class="section-title">Join the Lab</h2>
+        <p class="join-desc">
+          We are always interested in hearing from researchers and engineers who
+          share our commitment to rigorous, honest inquiry into the nature of
+          machine intelligence.
+        </p>
+        <div class="join-roles">
+          <div class="role-item glass-card">
+            <h4>Research Scientist</h4>
+            <p>
+              PhD in ML, cognitive science, or related field. Experience with
+              experimental design.
+            </p>
+          </div>
+          <div class="role-item glass-card">
+            <h4>Research Engineer</h4>
+            <p>
+              Strong systems engineering skills. Experience building simulations
+              or evaluation pipelines.
+            </p>
+          </div>
+          <div class="role-item glass-card">
+            <h4>Visiting Researcher</h4>
+            <p>
+              Open to collaborations with researchers from all backgrounds and
+              institutions.
+            </p>
+          </div>
+        </div>
+        <a
+          href="/contact"
+          class="btn-primary"
+          style="margin-top: var(--space-2xl);">Get In Touch →</a
+        >
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-hero {
+    padding-top: calc(var(--nav-height) + var(--space-5xl));
+    padding-bottom: var(--space-3xl);
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: var(--text-5xl);
+    font-weight: 900;
+    margin-bottom: var(--space-lg);
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .page-subtitle {
+    font-size: var(--text-lg);
+    color: var(--color-text-secondary);
+    max-width: 640px;
+    margin-inline: auto;
+    line-height: 1.7;
+  }
+
+  /* --- Team Grid --- */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .team-card {
+    padding: var(--space-2xl);
+    text-align: center;
+  }
+
+  .team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--avatar-color) 15%, transparent);
+    border: 2px solid color-mix(in srgb, var(--avatar-color) 30%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-lg);
+  }
+
+  .avatar-initials {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--avatar-color);
+  }
+
+  .team-name {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-xs);
+  }
+
+  .team-role {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--space-md);
+  }
+
+  .team-bio {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  /* --- Join Section --- */
+  .join-section {
+    text-align: center;
+  }
+
+  .join-content {
+    max-width: 800px;
+    margin-inline: auto;
+  }
+
+  .join-desc {
+    font-size: var(--text-base);
+    color: var(--color-text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .join-roles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .role-item {
+    padding: var(--space-xl);
+    text-align: left;
+  }
+
+  .role-item h4 {
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--color-text-primary);
+  }
+
+  .role-item p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: var(--text-3xl);
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .join-roles {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

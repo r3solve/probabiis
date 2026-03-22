@@ -1,0 +1,381 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const researchAreas = [
+    {
+        icon: "🌊",
+        title: "Sanitation & Urban Infrastructure",
+        description:
+            "Inadequate urban planning and sanitation systems lead to severe annual flooding, particularly in Accra. Can AI models help with flood prediction, drainage planning, and urban risk assessment?",
+        tags: ["Urban Planning", "Flooding", "Infrastructure"],
+        status: "Active",
+    },
+    {
+        icon: "🏥",
+        title: "Healthcare & Education Disparities",
+        description:
+            "Limited access to quality healthcare and education, with significant disparities between urban and rural areas. We test whether LLMs can assist in resource allocation, diagnostics, and educational access.",
+        tags: ["Healthcare", "Education", "Rural Access"],
+        status: "Active",
+    },
+    {
+        icon: "📉",
+        title: "Economic Crisis & Cost of Living",
+        description:
+            "Ghana faces high inflation, a depreciating currency, and severe debt-to-GDP ratios. We evaluate AI's ability to reason about macroeconomic policy, financial stability, and household economic planning.",
+        tags: ["Economics", "Policy", "Finance"],
+        status: "Active",
+    },
+    {
+        icon: "👥",
+        title: "Youth Unemployment & Skills Gap",
+        description:
+            "Youth unemployment exceeds 13%, exacerbated by a skills mismatch between education and industry needs. We explore how AI can model workforce development and training pathways.",
+        tags: ["Employment", "Skills", "Youth"],
+        status: "Active",
+    },
+    {
+        icon: "⚡",
+        title: "Energy Sector Instability (Dumsor)",
+        description:
+            "Inadequate and unreliable power supply—locally known as dumsor—affects both residential areas and industrial growth. We test AI reasoning for energy grid optimization and demand forecasting.",
+        tags: ["Energy", "Infrastructure", "Reliability"],
+        status: "Active",
+    },
+    {
+        icon: "🌿",
+        title: "Environmental Degradation & Galamsey",
+        description:
+            "Illegal small-scale gold mining (galamsey) is destroying water bodies, forests, and agricultural land. We investigate whether AI can assist in environmental monitoring and impact assessment.",
+        tags: ["Environment", "Mining", "Conservation"],
+        status: "Exploratory",
+    },
+    {
+        icon: "⚖️",
+        title: "Governance & Transparency",
+        description:
+            "Persistent issues with public sector corruption, lack of transparency, and politicization of public institutions. We explore AI's potential in data-driven governance and accountability tools.",
+        tags: ["Governance", "Transparency", "Policy"],
+        status: "Exploratory",
+    },
+];
+---
+
+<BaseLayout
+    title="Research — Probabilis"
+    description="Exploring the boundaries of machine intelligence through rigorous experimentation."
+>
+    <!-- HERO -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-label">Research</span>
+            <h1 class="page-title">Investigating Intelligence</h1>
+            <p class="page-subtitle">
+                We apply LLMs and transformers to real problems affecting
+                Ghana—from flooding and healthcare disparities to energy
+                instability and governance—where outcomes are verifiable and
+                understanding is clear.
+            </p>
+        </div>
+    </section>
+
+    <!-- RESEARCH AREAS -->
+    <section class="section">
+        <div class="container">
+            <span class="section-label">Focus Areas</span>
+            <h2 class="section-title">Research Agenda</h2>
+
+            <div class="research-grid">
+                {
+                    researchAreas.map((area) => (
+                        <article class="research-card glass-card">
+                            <div class="research-card-header">
+                                <span class="research-icon">{area.icon}</span>
+                                <span
+                                    class={`research-status status-${area.status.toLowerCase()}`}
+                                >
+                                    {area.status}
+                                </span>
+                            </div>
+                            <h3 class="research-card-title">{area.title}</h3>
+                            <p class="research-card-desc">{area.description}</p>
+                            <div class="research-tags">
+                                {area.tags.map((tag) => (
+                                    <span class="tag">{tag}</span>
+                                ))}
+                            </div>
+                        </article>
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- METHODOLOGY -->
+    <section class="section methodology-section">
+        <div class="container">
+            <div class="methodology-grid">
+                <div class="methodology-text">
+                    <span class="section-label">Methodology</span>
+                    <h2 class="section-title">How We Work</h2>
+                    <p class="methodology-desc">
+                        Our research methodology prioritizes locally verifiable
+                        outcomes over abstract benchmarks. By grounding
+                        experiments in Ghanaian contexts we already understand,
+                        we can clearly see where models succeed and where they
+                        fail.
+                    </p>
+                </div>
+                <div class="methodology-steps">
+                    <div class="step-item glass-card">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h4>Hypothesis Formation</h4>
+                            <p>
+                                Define specific, testable claims about model
+                                capability boundaries.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-item glass-card">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h4>Environment Design</h4>
+                            <p>
+                                Build simulated or semi-real environments that
+                                stress-test the hypothesis.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-item glass-card">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h4>Controlled Evaluation</h4>
+                            <p>
+                                Run experiments with systematic variation,
+                                measuring behavior under pressure.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step-item glass-card">
+                        <span class="step-number">04</span>
+                        <div>
+                            <h4>Analysis &amp; Publication</h4>
+                            <p>
+                                Publish findings with full
+                                reproducibility—positive and negative results.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    /* --- Page Hero --- */
+    .page-hero {
+        padding-top: calc(var(--nav-height) + var(--space-5xl));
+        padding-bottom: var(--space-3xl);
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: var(--text-5xl);
+        font-weight: 900;
+        margin-bottom: var(--space-lg);
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .page-subtitle {
+        font-size: var(--text-lg);
+        color: var(--color-text-secondary);
+        max-width: 640px;
+        margin-inline: auto;
+        line-height: 1.7;
+    }
+
+    /* --- Research Grid --- */
+    .research-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-lg);
+        margin-top: var(--space-2xl);
+    }
+
+    .research-card {
+        padding: var(--space-2xl);
+    }
+
+    .research-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-lg);
+    }
+
+    .research-icon {
+        font-size: var(--text-3xl);
+    }
+
+    .research-status {
+        font-family: var(--font-mono);
+        font-size: var(--text-xs);
+        padding: var(--space-xs) var(--space-md);
+        border-radius: var(--radius-full);
+        font-weight: 500;
+    }
+
+    .status-active {
+        background: rgba(56, 189, 248, 0.1);
+        color: var(--color-accent);
+        border: 1px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .status-exploratory {
+        background: rgba(192, 132, 252, 0.1);
+        color: #c084fc;
+        border: 1px solid rgba(192, 132, 252, 0.2);
+    }
+
+    .research-card-title {
+        font-size: var(--text-xl);
+        font-weight: 700;
+        margin-bottom: var(--space-md);
+    }
+
+    .research-card-desc {
+        font-size: var(--text-sm);
+        color: var(--color-text-secondary);
+        line-height: 1.7;
+        margin-bottom: var(--space-lg);
+    }
+
+    .research-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+    }
+
+    .tag {
+        font-family: var(--font-mono);
+        font-size: var(--text-xs);
+        padding: var(--space-xs) var(--space-sm);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-sm);
+        color: var(--color-text-muted);
+    }
+
+    /* --- Methodology --- */
+    .methodology-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-3xl);
+        align-items: start;
+    }
+
+    .methodology-desc {
+        font-size: var(--text-base);
+        color: var(--color-text-secondary);
+        line-height: 1.8;
+        margin-top: var(--space-lg);
+    }
+
+    .methodology-steps {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .step-item {
+        display: flex;
+        gap: var(--space-lg);
+        padding: var(--space-lg) var(--space-xl);
+        align-items: flex-start;
+    }
+
+    .step-number {
+        font-family: var(--font-mono);
+        font-size: var(--text-2xl);
+        font-weight: 700;
+        color: var(--color-accent);
+        min-width: 40px;
+        opacity: 0.6;
+    }
+
+    .step-item h4 {
+        font-size: var(--text-base);
+        font-weight: 600;
+        margin-bottom: var(--space-xs);
+    }
+
+    .step-item p {
+        font-size: var(--text-sm);
+        color: var(--color-text-muted);
+    }
+
+    /* --- Publications --- */
+    .publications-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+        margin-top: var(--space-2xl);
+    }
+
+    .pub-item {
+        display: flex;
+        gap: var(--space-xl);
+        padding: var(--space-xl) var(--space-2xl);
+        align-items: flex-start;
+    }
+
+    .pub-year {
+        font-family: var(--font-mono);
+        font-size: var(--text-sm);
+        color: var(--color-accent);
+        min-width: 60px;
+        padding-top: 2px;
+    }
+
+    .pub-title {
+        font-size: var(--text-lg);
+        font-weight: 600;
+        margin-bottom: var(--space-xs);
+    }
+
+    .pub-authors {
+        font-size: var(--text-sm);
+        color: var(--color-text-secondary);
+        margin-bottom: var(--space-xs);
+    }
+
+    .pub-venue {
+        font-size: var(--text-xs);
+        color: var(--color-text-muted);
+        font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+        .page-title {
+            font-size: var(--text-3xl);
+        }
+
+        .research-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .methodology-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .pub-item {
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+    }
+</style>

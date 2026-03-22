@@ -1,0 +1,274 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+    title="Blog — Probabilis"
+    description="Introducing Probabilis: an AI research lab in Accra, Ghana, testing the limits of machine intelligence against real local problems."
+>
+    <section class="page-hero">
+        <div class="container">
+            <span class="section-label">Blog</span>
+            <h1 class="page-title">Lab Notes</h1>
+            <p class="page-subtitle">
+                Thoughts, reflections, and updates from our journey building AI
+                research from Ghana.
+            </p>
+        </div>
+    </section>
+
+    <section class="section article-section">
+        <div class="container">
+            <article class="article-wrapper">
+                <div class="article-header">
+                    <span class="article-tag">Lab News</span>
+                    <span class="article-date">March 2026</span>
+                </div>
+                <h2 class="article-title">
+                    Introducing Probabilis: AI Research from Accra
+                </h2>
+                <p class="article-read-time">5 min read</p>
+
+                <div class="article-body">
+                    <p>
+                        There's a question that drives everything we do at
+                        Probabilis: <strong
+                            >are large language models truly intelligent—or are
+                            they just very good at pattern-matching?</strong
+                        >
+                    </p>
+
+                    <p>
+                        Most AI research tries to answer this with benchmarks—
+                        standardised tests designed in labs far removed from the
+                        realities of everyday life. But we believe the most
+                        honest way to test intelligence is to confront it with
+                        <em>real problems</em>, in contexts where we already
+                        understand the ground truth.
+                    </p>
+
+                    <h3>Why Ghana?</h3>
+
+                    <p>
+                        Ghana is navigating some of the most complex,
+                        interconnected challenges on the continent. Annual
+                        flooding devastates communities across Accra because of
+                        inadequate urban planning and sanitation infrastructure.
+                        Healthcare and education remain deeply unequal between
+                        urban centres and rural areas. The economy is under
+                        strain—high inflation, a weakening currency, and
+                        crushing debt have prompted an IMF stabilisation
+                        programme. Youth unemployment exceeds 13%, driven by a
+                        widening gap between what schools teach and what
+                        industries need. The power grid, plagued by the
+                        phenomenon Ghanaians know as <em>dumsor</em>, remains
+                        unreliable. Illegal mining—<em>galamsey</em>—is
+                        destroying rivers, forests, and farmland at an alarming
+                        rate. And governance challenges, from corruption to
+                        institutional opacity, undermine progress at every
+                        level.
+                    </p>
+
+                    <p>
+                        These are not abstract problems. They are tangible,
+                        measurable, and deeply felt. That makes them
+                        <strong>ideal testbeds for AI</strong>.
+                    </p>
+
+                    <h3>What We Do</h3>
+
+                    <p>
+                        At Probabilis, we treat large language models and
+                        transformers not as solutions—but as
+                        <strong>hypotheses</strong>. We take the problems Ghana
+                        faces every day and ask: can these models actually
+                        reason about them? Can they help predict flood risk from
+                        drainage data? Can they reason about energy demand on an
+                        unstable grid? Can they assist in allocating healthcare
+                        resources to underserved communities?
+                    </p>
+
+                    <p>
+                        By grounding our research in locally verifiable
+                        contexts, we can clearly see where models succeed—and,
+                        more importantly, where they fail. This isn't
+                        benchmarking for the sake of leaderboards. It's research
+                        designed to produce insight that matters.
+                    </p>
+
+                    <h3>Our Goals</h3>
+
+                    <ul>
+                        <li>
+                            <strong>Build rigorous evaluation frameworks</strong
+                            >
+                            that test AI against real Ghanaian challenges—not synthetic
+                            benchmarks.
+                        </li>
+                        <li>
+                            <strong>Develop local AI expertise</strong> by growing
+                            a research lab rooted in Ghana, staffed by Ghanaian researchers
+                            who understand the context firsthand.
+                        </li>
+                        <li>
+                            <strong>Contribute to global AI discourse</strong>
+                            by showing that meaningful evaluation requires diverse,
+                            locally grounded perspectives—not just Western-centric
+                            datasets.
+                        </li>
+                        <li>
+                            <strong>Shape the future of AI in Ghana</strong> by demonstrating
+                            how intelligent systems can—and cannot—address the country's
+                            most pressing needs.
+                        </li>
+                    </ul>
+
+                    <h3>Shaping the Future</h3>
+
+                    <p>
+                        We believe that the next chapter of AI won't be written
+                        exclusively in Silicon Valley or Beijing. It will be
+                        co-authored by researchers in Accra, Lagos, Nairobi, and
+                        across the Global South—people who bring not just
+                        technical skill, but lived understanding of the problems
+                        AI claims to solve.
+                    </p>
+
+                    <p>
+                        Probabilis is our contribution to that future. A small,
+                        focused lab doing honest work—testing what these models
+                        can really do, building from where we stand, and sharing
+                        what we learn along the way.
+                    </p>
+
+                    <p class="article-closing">
+                        We're just getting started. Follow along as we publish
+                        our findings, share our methodology, and build something
+                        meaningful from Accra.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .page-hero {
+        padding-top: calc(var(--nav-height) + var(--space-5xl));
+        padding-bottom: var(--space-2xl);
+        text-align: center;
+    }
+    .page-title {
+        font-size: var(--text-5xl);
+        font-weight: 900;
+        margin-bottom: var(--space-lg);
+        background: var(--gradient-hero);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .page-subtitle {
+        font-size: var(--text-lg);
+        color: var(--color-text-secondary);
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    /* --- Article --- */
+    .article-wrapper {
+        max-width: 720px;
+        margin-inline: auto;
+    }
+    .article-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: var(--space-lg);
+    }
+    .article-tag {
+        font-family: var(--font-mono);
+        font-size: var(--text-xs);
+        color: var(--color-accent);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        padding: var(--space-xs) var(--space-sm);
+        background: rgba(56, 189, 248, 0.08);
+        border-radius: var(--radius-sm);
+    }
+    .article-date {
+        font-size: var(--text-xs);
+        color: var(--color-text-muted);
+    }
+    .article-title {
+        font-size: var(--text-3xl);
+        font-weight: 800;
+        line-height: 1.25;
+        margin-bottom: var(--space-sm);
+        color: var(--color-text-primary);
+    }
+    .article-read-time {
+        font-size: var(--text-xs);
+        color: var(--color-text-muted);
+        margin-bottom: var(--space-2xl);
+        padding-bottom: var(--space-2xl);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    /* --- Article Body --- */
+    .article-body p {
+        font-size: var(--text-base);
+        color: var(--color-text-secondary);
+        line-height: 1.9;
+        margin-bottom: var(--space-lg);
+    }
+    .article-body strong {
+        color: var(--color-text-primary);
+    }
+    .article-body em {
+        color: var(--color-accent);
+        font-style: italic;
+    }
+    .article-body h3 {
+        font-size: var(--text-xl);
+        font-weight: 700;
+        color: var(--color-text-primary);
+        margin-top: var(--space-2xl);
+        margin-bottom: var(--space-md);
+    }
+    .article-body ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: var(--space-xl);
+    }
+    .article-body ul li {
+        position: relative;
+        padding-left: var(--space-xl);
+        font-size: var(--text-base);
+        color: var(--color-text-secondary);
+        line-height: 1.8;
+        margin-bottom: var(--space-md);
+    }
+    .article-body ul li::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: var(--color-accent);
+        font-weight: 700;
+    }
+    .article-closing {
+        margin-top: var(--space-xl);
+        padding-top: var(--space-xl);
+        border-top: 1px solid var(--color-border);
+        font-style: italic;
+        color: var(--color-text-muted) !important;
+    }
+
+    @media (max-width: 768px) {
+        .page-title {
+            font-size: var(--text-3xl);
+        }
+        .article-title {
+            font-size: var(--text-2xl);
+        }
+    }
+</style>
