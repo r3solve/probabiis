@@ -130,11 +130,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				</div>
 				<div class="narrative-text">
 					<p class="narrative-paragraph">
-						In recent years, large language models (LLMs) have moved
-						from experimental systems to widely deployed
-						infrastructure. Models such as GPT-4 demonstrate
-						capabilities in reasoning, coding, and communication
-						that were once considered out of reach.
+						In recent years, generative AI systems have moved from
+						experimental tools to widely deployed infrastructure.
+						Models such as GPT-4 demonstrate capabilities in
+						reasoning, coding, and communication that were once
+						considered out of reach.
 					</p>
 					<p class="narrative-paragraph">
 						As these systems scale, they are increasingly positioned
@@ -164,10 +164,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 				unresolved:
 			</p>
 			<blockquote class="big-question">
-				<p>
-					Are large language models sufficient for general
-					intelligence?
-				</p>
+				<p>Is generative AI sufficient for general intelligence?</p>
 			</blockquote>
 			<p class="question-divider-text">
 				This question has divided the research community.
@@ -205,45 +202,63 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			<span class="section-label">Our Approach</span>
 			<h2 class="section-title">Models as Hypotheses</h2>
 			<p class="section-subtitle approach-desc">
-				At Probabilis, we treat large language models not as
-				solutions—but as hypotheses. We apply them to locally-scoped
-				Ghanaian problems—domains where outcomes are verifiable and
-				context is clearly understood—to test whether they can
-				generalize to:
+				At Probabilis, we treat generative AI not as a solution—but as a
+				hypothesis. We apply it to real problems facing Ghana—domains
+				where outcomes are verifiable and context is deeply
+				understood—to test whether it can reason, plan, and generalize
+				across:
 			</p>
 
 			<div class="capabilities-grid">
 				<div class="capability-card glass-card">
-					<div class="capability-icon">🚦</div>
-					<h3>Urban Traffic & Infrastructure</h3>
+					<div class="capability-icon">🌊</div>
+					<h3>Sanitation & Urban Infrastructure</h3>
 					<p>
-						Can LLMs reason about Accra's traffic patterns,
-						intersection management, and real-time transit
-						decisions?
+						Can AI assist with flood prediction, drainage planning,
+						and urban risk assessment in cities like Accra?
 					</p>
 				</div>
 				<div class="capability-card glass-card">
-					<div class="capability-icon">🌾</div>
-					<h3>Agriculture & Supply Chains</h3>
+					<div class="capability-icon"></div>
+					<h3>Healthcare & Education Disparities</h3>
 					<p>
-						Testing crop planning, market pricing, and logistics
-						across Ghanaian farming communities.
+						Testing whether generative AI can help bridge gaps in
+						resource allocation, diagnostics, and access between
+						urban and rural communities.
 					</p>
 				</div>
 				<div class="capability-card glass-card">
-					<div class="capability-icon">🏥</div>
-					<h3>Healthcare & Diagnostics</h3>
+					<div class="capability-icon">📉</div>
+					<h3>Economic Crisis & Cost of Living</h3>
 					<p>
-						Evaluating diagnostic reasoning in local clinical
-						contexts—malaria triage, maternal care, rural health.
+						Evaluating AI's ability to reason about macroeconomic
+						policy, financial stability, and household economic
+						planning.
 					</p>
 				</div>
 				<div class="capability-card glass-card">
-					<div class="capability-icon">🗣️</div>
-					<h3>Local Language & Culture</h3>
+					<div class="capability-icon">👥</div>
+					<h3>Youth Unemployment & Skills Gap</h3>
 					<p>
-						Probing understanding of Twi, Ga, Ewe, and culturally
-						embedded reasoning beyond English-centric benchmarks.
+						Exploring how AI can model workforce development,
+						training pathways, and skills matching for Ghana's
+						youth.
+					</p>
+				</div>
+				<div class="capability-card glass-card">
+					<div class="capability-icon">⚡</div>
+					<h3>Energy Instability (Dumsor)</h3>
+					<p>
+						Testing AI reasoning for energy grid optimization and
+						demand forecasting amid unreliable power supply.
+					</p>
+				</div>
+				<div class="capability-card glass-card">
+					<div class="capability-icon">🌿</div>
+					<h3>Environment & Galamsey</h3>
+					<p>
+						Investigating whether AI can assist in environmental
+						monitoring and impact assessment of illegal mining.
 					</p>
 				</div>
 			</div>
@@ -269,8 +284,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 						<li class="activity-item glass-card">
 							<span class="activity-marker"></span>
 							<span
-								>Cross-domain evaluation of LLMs on Ghanaian
-								datasets</span
+								>Cross-domain evaluation of generative AI on
+								Ghanaian datasets</span
 							>
 						</li>
 						<li class="activity-item glass-card">
@@ -306,7 +321,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 			<span class="section-label">Why It Matters</span>
 			<div class="matters-statements">
 				<div class="matter-item">
-					<span class="matter-condition">If LLMs are sufficient</span>
+					<span class="matter-condition"
+						>If generative AI is sufficient</span
+					>
 					<p class="matter-consequence">
 						for general intelligence, their continued development
 						will define the future of technology and society.
@@ -593,7 +610,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 	.capabilities-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		gap: var(--space-lg);
 		margin-bottom: var(--space-2xl);
 	}
